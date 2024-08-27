@@ -39,77 +39,53 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnSul = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.btnTodos = new System.Windows.Forms.Button();
             this.btnNorte = new System.Windows.Forms.Button();
             this.btnNordeste = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnSul = new System.Windows.Forms.Button();
             this.BtnSudeste = new System.Windows.Forms.Button();
             this.btnCentroOeste = new System.Windows.Forms.Button();
             this.lblTeste = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblSudeste = new System.Windows.Forms.Label();
+            this.lblSul = new System.Windows.Forms.Label();
+            this.lblCentroOeste = new System.Windows.Forms.Label();
             this.lblNordeste = new System.Windows.Forms.Label();
             this.lblNorte = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cboTodos
             // 
+            this.cboTodos.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cboTodos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTodos.FormattingEnabled = true;
             this.cboTodos.Items.AddRange(new object[] {
             "AC",
-            "",
             "AL",
-            "",
             "AP",
-            "",
             "AM",
-            "",
             "BA",
-            "",
             "CE",
-            "",
             "DF",
-            "",
             "ES",
-            "",
             "GO",
-            "",
             "MA",
-            "",
             "MT",
-            "",
             "MS",
-            "",
             "MG",
-            "",
             "PA",
-            "",
             "PB",
-            "",
             "PR",
-            "",
             "PE",
-            "",
             "PI",
-            "",
             "RJ",
-            "",
             "RN",
-            "",
             "RS",
-            "",
             "RO",
-            "",
             "RR",
-            "",
             "SC",
-            "",
             "SP",
-            "",
             "SE",
-            "",
             "TO"});
             this.cboTodos.Location = new System.Drawing.Point(487, 54);
             this.cboTodos.Name = "cboTodos";
@@ -118,6 +94,7 @@
             // 
             // cboNorte
             // 
+            this.cboNorte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboNorte.FormattingEnabled = true;
             this.cboNorte.Location = new System.Drawing.Point(487, 128);
             this.cboNorte.Name = "cboNorte";
@@ -126,6 +103,7 @@
             // 
             // cboNordeste
             // 
+            this.cboNordeste.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboNordeste.FormattingEnabled = true;
             this.cboNordeste.Location = new System.Drawing.Point(487, 196);
             this.cboNordeste.Name = "cboNordeste";
@@ -134,6 +112,7 @@
             // 
             // cboSul
             // 
+            this.cboSul.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSul.FormattingEnabled = true;
             this.cboSul.Location = new System.Drawing.Point(487, 418);
             this.cboSul.Name = "cboSul";
@@ -142,6 +121,7 @@
             // 
             // cboSudeste
             // 
+            this.cboSudeste.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSudeste.FormattingEnabled = true;
             this.cboSudeste.Location = new System.Drawing.Point(487, 337);
             this.cboSudeste.Name = "cboSudeste";
@@ -150,6 +130,7 @@
             // 
             // cboCentroOeste
             // 
+            this.cboCentroOeste.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCentroOeste.FormattingEnabled = true;
             this.cboCentroOeste.Location = new System.Drawing.Point(487, 264);
             this.cboCentroOeste.Name = "cboCentroOeste";
@@ -201,14 +182,14 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Região Sudeste:";
             // 
-            // btnSul
+            // label
             // 
-            this.btnSul.AutoSize = true;
-            this.btnSul.Location = new System.Drawing.Point(369, 426);
-            this.btnSul.Name = "btnSul";
-            this.btnSul.Size = new System.Drawing.Size(62, 13);
-            this.btnSul.TabIndex = 16;
-            this.btnSul.Text = "Região Sul:";
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(369, 426);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(62, 13);
+            this.label.TabIndex = 16;
+            this.label.Text = "Região Sul:";
             // 
             // btnTodos
             // 
@@ -230,6 +211,7 @@
             this.btnNorte.TabIndex = 18;
             this.btnNorte.Text = "-";
             this.btnNorte.UseVisualStyleBackColor = true;
+            this.btnNorte.Click += new System.EventHandler(this.btnNorte_Click);
             // 
             // btnNordeste
             // 
@@ -240,16 +222,18 @@
             this.btnNordeste.TabIndex = 19;
             this.btnNordeste.Text = "-";
             this.btnNordeste.UseVisualStyleBackColor = true;
+            this.btnNordeste.Click += new System.EventHandler(this.btnNordeste_Click);
             // 
-            // button5
+            // btnSul
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button5.Location = new System.Drawing.Point(725, 416);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(27, 23);
-            this.button5.TabIndex = 21;
-            this.button5.Text = "-";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnSul.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.btnSul.Location = new System.Drawing.Point(725, 416);
+            this.btnSul.Name = "btnSul";
+            this.btnSul.Size = new System.Drawing.Size(27, 23);
+            this.btnSul.TabIndex = 21;
+            this.btnSul.Text = "-";
+            this.btnSul.UseVisualStyleBackColor = true;
+            this.btnSul.Click += new System.EventHandler(this.btnSul_Click);
             // 
             // BtnSudeste
             // 
@@ -260,6 +244,7 @@
             this.BtnSudeste.TabIndex = 22;
             this.BtnSudeste.Text = "-";
             this.BtnSudeste.UseVisualStyleBackColor = true;
+            this.BtnSudeste.Click += new System.EventHandler(this.BtnSudeste_Click);
             // 
             // btnCentroOeste
             // 
@@ -270,43 +255,43 @@
             this.btnCentroOeste.TabIndex = 23;
             this.btnCentroOeste.Text = "-";
             this.btnCentroOeste.UseVisualStyleBackColor = true;
+            this.btnCentroOeste.Click += new System.EventHandler(this.btnCentroOeste_Click);
             // 
             // lblTeste
             // 
             this.lblTeste.AutoSize = true;
-            this.lblTeste.Location = new System.Drawing.Point(807, 62);
+            this.lblTeste.Location = new System.Drawing.Point(807, 59);
             this.lblTeste.Name = "lblTeste";
-            this.lblTeste.Size = new System.Drawing.Size(13, 13);
+            this.lblTeste.Size = new System.Drawing.Size(19, 13);
             this.lblTeste.TabIndex = 24;
-            this.lblTeste.Text = "0";
-            this.lblTeste.Click += new System.EventHandler(this.label7_Click);
+            this.lblTeste.Text = "27";
             // 
-            // label7
+            // lblSudeste
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(807, 345);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(13, 13);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "0";
+            this.lblSudeste.AutoSize = true;
+            this.lblSudeste.Location = new System.Drawing.Point(807, 345);
+            this.lblSudeste.Name = "lblSudeste";
+            this.lblSudeste.Size = new System.Drawing.Size(13, 13);
+            this.lblSudeste.TabIndex = 25;
+            this.lblSudeste.Text = "0";
             // 
-            // label8
+            // lblSul
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(807, 418);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(13, 13);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "0";
+            this.lblSul.AutoSize = true;
+            this.lblSul.Location = new System.Drawing.Point(807, 421);
+            this.lblSul.Name = "lblSul";
+            this.lblSul.Size = new System.Drawing.Size(13, 13);
+            this.lblSul.TabIndex = 26;
+            this.lblSul.Text = "0";
             // 
-            // label9
+            // lblCentroOeste
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(807, 274);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(13, 13);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "0";
+            this.lblCentroOeste.AutoSize = true;
+            this.lblCentroOeste.Location = new System.Drawing.Point(807, 274);
+            this.lblCentroOeste.Name = "lblCentroOeste";
+            this.lblCentroOeste.Size = new System.Drawing.Size(13, 13);
+            this.lblCentroOeste.TabIndex = 27;
+            this.lblCentroOeste.Text = "0";
             // 
             // lblNordeste
             // 
@@ -333,17 +318,17 @@
             this.ClientSize = new System.Drawing.Size(1439, 745);
             this.Controls.Add(this.lblNorte);
             this.Controls.Add(this.lblNordeste);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lblCentroOeste);
+            this.Controls.Add(this.lblSul);
+            this.Controls.Add(this.lblSudeste);
             this.Controls.Add(this.lblTeste);
             this.Controls.Add(this.btnCentroOeste);
             this.Controls.Add(this.BtnSudeste);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnSul);
             this.Controls.Add(this.btnNordeste);
             this.Controls.Add(this.btnNorte);
             this.Controls.Add(this.btnTodos);
-            this.Controls.Add(this.btnSul);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -376,17 +361,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label btnSul;
+        private System.Windows.Forms.Label label;
         private System.Windows.Forms.Button btnTodos;
         private System.Windows.Forms.Button btnNorte;
         private System.Windows.Forms.Button btnNordeste;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnSul;
         private System.Windows.Forms.Button BtnSudeste;
         private System.Windows.Forms.Button btnCentroOeste;
         private System.Windows.Forms.Label lblTeste;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblSudeste;
+        private System.Windows.Forms.Label lblSul;
+        private System.Windows.Forms.Label lblCentroOeste;
         private System.Windows.Forms.Label lblNordeste;
         private System.Windows.Forms.Label lblNorte;
     }
